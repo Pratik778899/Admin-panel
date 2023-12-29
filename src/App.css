@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #00040F;
+    font-family: Poppins;
+    color: white;
+}
+
+.text {
+    color: #FFF;
+}
+
+.glow {
+    position: absolute;
+    left: -40%;
+    width: 195px;
+    height: 324px;
+    flex-shrink: 0;
+    border-radius: 324px;
+    background: #FFF;
+    filter: blur(225px);
+}
+
+.text-grade {
+    background: radial-gradient(64.33% 64.33% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.button {
+    color: #00040E;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 4px 20px;
+    margin:  0 5px;
+    border: 0px;
+    outline: 0;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background: linear-gradient(158deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+}
+
+.flex{
+    display: flex;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.justify-content{
+    justify-content: space-between;
+}
+
+.m-2{
+    margin: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 50px;
+}

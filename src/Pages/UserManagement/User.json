@@ -1,0 +1,24 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"Pratik Chaudhari",
+            "league":"Diamond"
+        },
+        {
+            "id":4,
+            "name":"Pratik chaudhari",
+            "league":"Diamond"
+        },
+        {
+            "id":2,
+            "name":"Pratik Chaudhari",
+            "league":"Gold"
+        },
+        {
+            "id":3,
+            "name":"Pratik Chaudhari",
+            "league":"Platinum"
+        }
+    ]
+}

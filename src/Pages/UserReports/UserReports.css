@@ -1,0 +1,50 @@
+#userReports {
+    margin: 20px;
+}
+
+.singleReport {
+    gap: 20px;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.popup-content {
+    border-radius: 10px;
+    background: linear-gradient(111deg, #FFF -265.46%, #14101D 96.75%);
+    box-shadow: 4px 6px 30px 0px rgba(19, 36, 46, 0.25);
+    /* width: 30%; */
+    padding: 20px;
+    padding-top: 10px;
+}
+
+#reply textarea{
+    border-radius: 8px;
+    background-color: #14101D;
+    padding: 8px;
+    color: white;
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    padding-right: 10px;
+    height: 40px;
+}
+
+#reply{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

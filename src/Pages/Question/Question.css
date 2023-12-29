@@ -1,0 +1,30 @@
+#question-container{
+    margin: 20px;
+}
+
+#question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+#question-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+#mr{
+    margin-right: 120px;
+}
+
+#ml{
+    margin-left: 85px;
+}
+
+.justify-center{
+    justify-content: center;
+    margin: 50px;
+}

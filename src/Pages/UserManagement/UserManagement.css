@@ -1,0 +1,24 @@
+#userPages {
+    display: flex;
+    gap: 20px;
+}
+
+#user-management {
+    padding: 20px;
+}
+
+#user-container{
+    height: 100%;
+}
+
+#user-header,
+#userdata {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#box{
+    width: 15px;
+}

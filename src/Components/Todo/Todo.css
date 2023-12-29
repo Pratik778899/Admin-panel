@@ -1,0 +1,90 @@
+#todo-main {
+    border-radius: 20px;
+    background: linear-gradient(144deg, #FFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    height: 300px;
+    overflow: auto;
+}
+
+#popup {
+    border-radius: 9.121px;
+    background: linear-gradient(113deg, #FFF -242.51%, #14101D 85.56%);
+    box-shadow: -0.243px -0.243px 0.365px 0px rgba(0, 0, 0, 0.36) inset;
+    backdrop-filter: blur(15.201066017150879px);
+    padding: 20px;
+    position: fixed;
+    z-index: 1111111;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 300px rgb(57, 55, 55));
+}
+
+
+#dropdown {
+    background-color: #11101D;
+    border: 0px;
+    outline: 0px;
+    border-radius: 20px;
+    padding: 8px 10px;
+    color: white;
+    margin: 5px 0px;
+    width: 100%;
+}
+
+.dropdownOption {
+    border: 0px;
+    outline: 0px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#todo-input {
+    display: flex;
+    justify-content: center;
+}
+
+#todo-input input {
+    background-color: #11101D;
+    padding: 8px 15px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 8px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+#cancelSave {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#todoContent button {
+    padding: 10px 20px;
+    border: 0px;
+    font-size: 28px;
+}
+
+#todoContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#todo-main ul {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-main ul li {
+    background-color: #2f2c37;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#todo-main ul li:hover {
+    background-color: #11101D;
+}

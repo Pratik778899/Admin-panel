@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#content {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.ri-arrow-drop-right-line {
+    font-size: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.ri-arrow-drop-left-line {
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 2;
+    margin-top: 5px;
+    padding: 9px 9px;
+    font-size: 28px;
+    background: linear-gradient(158deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+    border-radius: 50%;
+    color: black;
+}
+
+.sidebar {
+    background-color: #00040F;
+    padding: 20px;
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    padding: 10px 0px 0px 0px;
+    /* margin-bottom: 10px; */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 5px 0;
+}
+
+
+.sidebar h2.selected {
+    background-color: #13275f;
+    color: #333;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.sidebar li.selected {
+    background-color: #13275f;
+    color: #333;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 5px;
+    font-weight: 600;
+
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+#slide-content {
+    position: fixed;
+    z-index: 111111111111111;
+}
+
+#logout-main {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 90vh;
+    cursor: pointer;
+}
+
+#logout,
+#Login-slider{
+    display: flex;
+    align-items: center;
+}
+
+.ri-logout-box-r-line,
+.ri-login-box-line{
+    font-size: 28px;
+    cursor: pointer;
+}

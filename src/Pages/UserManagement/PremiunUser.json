@@ -1,0 +1,28 @@
+{
+    "Premiumusers":[
+        {
+            "id":1,
+            "name":"Pratik Chaudhari",
+            "validity":"year",
+            "league":"Diamond"
+        },
+        {
+            "id":4,
+            "name":"Pratik chaudhari",
+            "validity":"week",
+            "league":"Diamond"
+        },
+        {
+            "id":2,
+            "name":"Pratik Chaudhari",
+            "validity":"month",
+            "league":"Gold"
+        },
+        {
+            "id":3,
+            "name":"Pratik Chaudhari",
+            "validity":"year",
+            "league":"Platinum"
+        }
+    ]
+}
