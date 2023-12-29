@@ -132,6 +132,7 @@ const Login = () => {
                 className="otp-box"
                 placeholder="Enter OTP"
               />
+              <button onClick={handleGenerateOTP} className="button">Resend OTP</button>
               <button className="button" onClick={handleLogin}>
                 Login
               </button>

@@ -8,7 +8,8 @@ import "./Components/Sidebar/Sidebar.css";
 const Layout = props => {
   const dispatch = useDispatch();
   const selector = useSelector(state => state.Reducer.navIsOpen);
-  // console.log(selector);
+  const isLogged = useSelector(state => state.Reducer.isLogged);
+  // console.log(isLogged);
 
   const handleToggle = () => {
     dispatch(navOpen(!selector));
@@ -19,9 +20,13 @@ const Layout = props => {
       <div style={{ display: "flex" }}>
         <div id="sidebar-container">
           {selector && <Sidebar />}
-          <div id="menu" onClick={handleToggle}>
-            <i className={`ri-${selector ? "" : "arrow-drop-right-line"}`}></i>
-          </div>
+          {isLogged && (
+            <div id="menu" onClick={handleToggle}>
+              <i
+                className={`ri-${selector ? "" : "arrow-drop-right-line"}`}
+              ></i>
+            </div>
+          )}
         </div>
         <div id="content">{props.children}</div>
       </div>
