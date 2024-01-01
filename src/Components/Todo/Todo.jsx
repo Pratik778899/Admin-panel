@@ -28,11 +28,12 @@ const Todo = () => {
     settask("");
   };
 
-  const handelRemoveTodo = indexToRemove => {
-    const updatedTask = tasks.filter((task, index) => index !== indexToRemove);
-    localStorage.setItem("TodoDatabase", JSON.stringify(updatedTask));
-    settasks(updatedTask);
+  const handleRemoveTodo = indexToRemove => {
+    const updatedTasks = todoDatabase.filter((task, index) => index !== indexToRemove);
+    localStorage.setItem("TodoDatabase", JSON.stringify(updatedTasks));
+    settasks(updatedTasks);
   };
+  
 
   const handleSave = () => {
     if (task.trim() !== "" && week.trim() !== "") {
@@ -108,7 +109,7 @@ const Todo = () => {
                     {task.week} , Task: {task.task}
                     <button
                       className="button"
-                      onClick={() => handelRemoveTodo(index)}
+                      onClick={() => handleRemoveTodo(index)}
                     >
                       Remove
                     </button>
@@ -121,7 +122,7 @@ const Todo = () => {
                     {task.week} , Task: {task.task}
                     <button
                       className="button"
-                      onClick={() => handelRemoveTodo(index)}
+                      onClick={() => handleRemoveTodo(index)}
                     >
                       Remove
                     </button>

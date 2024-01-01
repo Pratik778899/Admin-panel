@@ -9,26 +9,38 @@ const UserManagement = () => {
   const [users, setUsers] = useState(User.users);
   const [premiumUsers, setPremiumUsers] = useState(PremiumUser.Premiumusers);
 
-  const handlePages = (x) => {
+  const handlePages = x => {
     setPages(x);
   };
 
-  const handleFilter = (filterType) => {
+  const handleFilter = filterType => {
     setFilter(filterType);
   };
 
-  const handleDeleteUser = (id) => {
+  const handleDeleteUser = id => {
     if (pages === 1) {
-      const updatedUserList = users.filter((item) => item.id !== id);
+      const updatedUserList = users.filter(item => item.id !== id);
       setUsers(updatedUserList);
     } else if (pages === 2) {
-      const updatedPremiumUserList = premiumUsers.filter((item) => item.id !== id);
+      const updatedPremiumUserList = premiumUsers.filter(
+        item => item.id !== id
+      );
       setPremiumUsers(updatedPremiumUserList);
     }
-    setFilter("all");
   };
 
-  const filteredUsers = pages === 1 ? users.filter((user) => filter === "all" || user.league.toLowerCase() === filter.toLowerCase()) : premiumUsers.filter((user) => filter === "all" || user.league.toLowerCase() === filter.toLowerCase());
+  const filteredUsers =
+    pages === 1
+      ? users.filter(
+          user =>
+            filter === "all" ||
+            user.league.toLowerCase() === filter.toLowerCase()
+        )
+      : premiumUsers.filter(
+          user =>
+            filter === "all" ||
+            user.league.toLowerCase() === filter.toLowerCase()
+        );
 
   useEffect(() => {
     setUsers(User.users);
@@ -54,10 +66,16 @@ const UserManagement = () => {
                 <button className="button" onClick={() => handleFilter("all")}>
                   All User
                 </button>
-                <button className="button" onClick={() => handleFilter("diamond")}>
+                <button
+                  className="button"
+                  onClick={() => handleFilter("diamond")}
+                >
                   Diamond User
                 </button>
-                <button className="button" onClick={() => handleFilter("platinum")}>
+                <button
+                  className="button"
+                  onClick={() => handleFilter("platinum")}
+                >
                   Platinum User
                 </button>
               </div>
@@ -69,18 +87,27 @@ const UserManagement = () => {
                 <h4>League</h4>
                 <h4>Delete User</h4>
               </div>
-              {filteredUsers.map((item, index) => (
-                <div id="userdata" key={item.id + index}>
-                  <div id="box">
-                    <h4>{item.id}</h4>
+              {filteredUsers.length > 0 ? (
+                filteredUsers.map((item, index) => (
+                  <div id="userdata" key={item.id + index}>
+                    <div id="box">
+                      <h4>{item.id}</h4>
+                    </div>
+                    <h4>{item.name}</h4>
+                    <h4>{item.league}</h4>
+                    <button
+                      onClick={() => handleDeleteUser(item.id)}
+                      className="button"
+                    >
+                      Delete User
+                    </button>
                   </div>
-                  <h4>{item.name}</h4>
-                  <h4>{item.league}</h4>
-                  <button onClick={() => handleDeleteUser(item.id)} className="button">
-                    Delete User
-                  </button>
+                ))
+              ) : (
+                <div id="no-users-message">
+                  <p>No users found.</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         ) : (
@@ -96,19 +123,28 @@ const UserManagement = () => {
                 <h4>League</h4>
                 <h4>Delete User</h4>
               </div>
-              {filteredUsers.map((item, index) => (
-                <div id="userdata" key={item.id + index}>
-                  <div id="box">
-                    <h4>{item.id}</h4>
+              {filteredUsers.length > 0 ? (
+                filteredUsers.map((item, index) => (
+                  <div id="userdata" key={item.id + index}>
+                    <div id="box">
+                      <h4>{item.id}</h4>
+                    </div>
+                    <h4>{item.name}</h4>
+                    <h4>{item.validity}</h4>
+                    <h4>{item.league}</h4>
+                    <button
+                      onClick={() => handleDeleteUser(item.id)}
+                      className="button"
+                    >
+                      Delete User
+                    </button>
                   </div>
-                  <h4>{item.name}</h4>
-                  <h4>{item.validity}</h4>
-                  <h4>{item.league}</h4>
-                  <button onClick={() => handleDeleteUser(item.id)} className="button">
-                    Delete User
-                  </button>
+                ))
+              ) : (
+                <div id="no-users-message">
+                  <p>No users found.</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         )}

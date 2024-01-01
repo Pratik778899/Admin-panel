@@ -10,6 +10,7 @@
     padding: 20px;
     height: 340px;
     overflow: auto;
+    width: 70%;
 }
 
 #personContainer img {

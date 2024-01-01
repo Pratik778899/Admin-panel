@@ -57,7 +57,7 @@ const Sidebar = () => {
                 Dashboard
               </Link>
             </h2>
-            <h2 className="pointer">Progress</h2>
+            <h2 >Progress</h2>
             <ul>
               <li
                 className={`pointer ${isItemSelected("user-management")}`}
@@ -68,7 +68,7 @@ const Sidebar = () => {
                 </Link>
               </li>
             </ul>
-            <h2 className="pointer">Question Management</h2>
+            <h2 >Question Management</h2>
             <ul>
               <li
                 className={`pointer ${isItemSelected("Question")}`}
@@ -79,7 +79,7 @@ const Sidebar = () => {
                 </Link>
               </li>
             </ul>
-            <h2 className="pointer">Reports</h2>
+            <h2 >Reports</h2>
             <ul>
               <li
                 className={`pointer ${isItemSelected("User Reports")}`}

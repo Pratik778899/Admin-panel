@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CommentData from "../../Comment.json";
+import CommentData from "./Comment.json";
 import "./UserComment.css";
 
 const UserComment = () => {
