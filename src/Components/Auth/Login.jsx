@@ -5,10 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { isLogged } from "../../Store/Action/Index";
 import { useNavigate } from "react-router-dom";
+import Lock from "../../Assets/lock.png";
+import Loginimg from "../../Assets/login.png";
 
 const Login = () => {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const userDataString = localStorage.getItem("userDatabase");
   const userData = userDataString ? JSON.parse(userDataString) : [];
   const [email, setEmail] = useState("");
@@ -79,9 +81,9 @@ const Login = () => {
         theme: "dark",
       });
     } else if (parseInt(otp) === generatedOTP) {
-      localStorage.setItem("LoggedUser" , JSON.stringify({email , otp}))
-      dispatch(isLogged(true))
-      navigate("/")
+      localStorage.setItem("LoggedUser", JSON.stringify({ email, otp }));
+      dispatch(isLogged(true));
+      navigate("/");
       toast.success("Logged in successfully!", {
         position: "top-right",
         autoClose: 5000,
@@ -109,6 +111,17 @@ const Login = () => {
   return (
     <>
       <ToastContainer />
+      <div className="glow-round"></div>
+      <div className="login-img">
+        <div className="glowLogin"></div>
+        <img src={Loginimg} alt="login" className="login" />
+      </div>
+      <div className="lock-img">
+        <div className="glowLock"></div>
+        <img src={Lock} alt="lock" className="Lock" />
+      </div>
+
+
       <div id="Login">
         <h2>Login Your Account Here</h2>
         <div id="Login-Content">
@@ -132,7 +145,9 @@ const Login = () => {
                 className="otp-box"
                 placeholder="Enter OTP"
               />
-              <button onClick={handleGenerateOTP} className="button">Resend OTP</button>
+              <button onClick={handleGenerateOTP} className="button">
+                Resend OTP
+              </button>
               <button className="button" onClick={handleLogin}>
                 Login
               </button>
@@ -140,6 +155,8 @@ const Login = () => {
           )}
         </div>
       </div>
+
+      <div className="glow-round-right"></div>
     </>
   );
 };

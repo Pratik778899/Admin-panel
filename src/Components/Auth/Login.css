@@ -4,13 +4,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
 
-#Login-Content{
+#Login-Content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 #email {
-    background-color: #171c2c;
+    background-color: #172c1c;
     padding: 8px 25px;
     border-radius: 8px;
     margin: 20px;
@@ -34,7 +34,7 @@
 }
 
 .otp-box {
-    background: #171c2c;
+    background: #172c1b;
     /* width: px; */
     height: 40px;
     margin: 0 5px;
@@ -43,3 +43,53 @@
     border-radius: 5px;
     color: white;
 }
+
+.login {
+    position: relative;
+    height: 300px;
+    /* right: 5%; */
+    /* width: 100%; */
+}
+
+.login-img{
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+
+}
+
+.glowLogin{
+    position: absolute;
+    background-color: #4fff1576;
+    width: 200px;
+    height: 150px;
+    filter: blur(120px);
+    right: 10%;
+    top: 5%;
+}
+
+.Lock {
+    position: relative;
+    height: 300px;
+    margin-top: 125px;
+    /* bottom: 5%;
+    left: 5%; */
+    rotate: -5deg;
+}
+.lock-img{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.glowLock{
+    position: absolute;
+    background-color: #4fff1576;
+    width: 200px;
+    height: 150px;
+    filter: blur(120px);
+    bottom: 10%;
+    left: 5%;
+
+}
+

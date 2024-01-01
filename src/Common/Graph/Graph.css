@@ -3,8 +3,8 @@
   width: 40vw;
   padding: 20px;
   border-radius: 20px;
-  background: linear-gradient(153deg, rgba(255, 255, 255, 0.00) -341.94%, #14101D 95.11%);
-  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.10);
+    background: linear-gradient(153deg, rgba(255, 255, 255, 0.00) -341.94%, #121d10 95.11%);
+    box-shadow: 0px 20px 100px -10px rgba(66, 91, 66, 0.1);
   color: white !important;
   margin: 20px 0;
 }
@@ -77,7 +77,7 @@
 #unsolved-colour{
   width: 1.5vw;
   height: 1.5vw;
-  background-color: blue;
+  background-color: green;
   border-radius: 50%;
 }
 

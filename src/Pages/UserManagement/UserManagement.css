@@ -5,9 +5,13 @@
 
 #user-management {
     padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(153deg, rgba(255, 255, 255, 0.00) -341.94%, #121d10 95.11%);
+    box-shadow: 0px 20px 100px -10px rgba(66, 91, 66, 0.1);
+    margin: 20px;
 }
 
-#user-container{
+#user-container {
     height: 100%;
 }
 
@@ -19,6 +23,16 @@
     align-items: center;
 }
 
-#box{
+#box {
     width: 15px;
+}
+
+#tab1,
+#tab2 {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.activeTab {
+    border-bottom: 3px solid rgb(0, 255, 60);
 }

@@ -11,11 +11,11 @@ const Question = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = questions.slice(indexOfFirstItem, indexOfLastItem);
 
-  const paginate = (pageNumber) => {
+  const paginate = pageNumber => {
     setCurrentPage(pageNumber);
   };
 
-  const handleDeleteQuestion = (indexToRemove) => {
+  const handleDeleteQuestion = indexToRemove => {
     const updatedQuestions = questions.filter(
       (question, index) => index !== indexToRemove
     );
@@ -24,8 +24,9 @@ const Question = () => {
 
   return (
     <>
-      <div id="question-container">
-        <h1 className="text-grade">Question</h1>
+      <div className="glow-round"></div>
+      <div id="question-container" className="card relative">
+        <h1 className="small-text-grade">Question</h1>
         <div id="question">
           <h4>Question</h4>
           <h4 id="ml">Avg Que Solved</h4>
@@ -68,6 +69,7 @@ const Question = () => {
           )}
         </div>
       </div>
+      <div className="glow-round-right"></div>
     </>
   );
 };

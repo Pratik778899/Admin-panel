@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { isLogged, navOpen, toggleSidebarItem } from "../../Store/Action/Index";
 import { Link, useNavigate } from "react-router-dom";
@@ -20,6 +20,7 @@ const Sidebar = () => {
   };
 
   const handleItemClick = itemName => {
+    localStorage.setItem("selectedSidebarItem", itemName);
     dispatch(
       toggleSidebarItem(
         itemName === selectedSidebarItem ? "Dashboard" : itemName
@@ -35,11 +36,18 @@ const Sidebar = () => {
     dispatch(navOpen(!selector));
   };
 
+  useEffect(() => {
+    const storedItem = localStorage.getItem("selectedSidebarItem");
+    if (storedItem) {
+      dispatch(toggleSidebarItem(storedItem));
+    }
+  }, [dispatch]);
+
   return (
     <>
-      <div className="glow"></div>
       {isLoggedIn && (
-        <div className="sidebar">
+        <div className="sidebar relative">
+          <div className="glow-round"></div>
           <div id="slide-content" className="text">
             <div id="logo">
               <h1 className="text-grade">BKC</h1>
@@ -92,7 +100,7 @@ const Sidebar = () => {
             </ul>
           </div>
 
-          <div id="logout-main" className="text">
+          <div id="logout-main" className="text relative">
             {isLoggedIn ? (
               <div id="logout" onClick={handelLogout}>
                 <i className="ri-logout-box-r-line"></i>
@@ -105,6 +113,7 @@ const Sidebar = () => {
               </div>
             )}
           </div>
+          <div className="glow-round-right "></div>
         </div>
       )}
     </>

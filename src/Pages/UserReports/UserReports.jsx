@@ -16,49 +16,55 @@ const UserReports = () => {
     setSelectedReport(null);
   };
 
-  const handelMessageSend =()=>{
-    alert("message send sucessfully")
-    setShowReplyPopup(false)
-  }
+  const handelMessageSend = () => {
+    alert("message send sucessfully");
+    setShowReplyPopup(false);
+  };
 
   return (
-    <div id="userReports">
-      <h1 className="text-grade">User Reports</h1>
-      <div id="userReportMap">
-        {Reports.reports.map((item, index) => (
-          <div className="flex singleReport" key={index}>
-            <h3>{index + 1}</h3>
-            <h3>{item.name}</h3>
-            <h3>{item.comment}</h3>
-            <button className="button" onClick={() => handleReplyClick(item)}>
-              Reply
-            </button>
-          </div>
-        ))}
-      </div>
-      {showReplyPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close" onClick={closePopup}>
-              &times;
-            </span>
-            {selectedReport && (
-              <div id="reply">
-                <h2>Replying to: {selectedReport.name}</h2>
-                <textarea
-                  rows="4"
-                  cols="50"
-                  placeholder="Type your reply here..."
-                ></textarea>
-                <div className="m-2">
-                  <button onClick={handelMessageSend} className="button">Send Reply</button>
-                </div>
-              </div>
-            )}
-          </div>
+    <>
+      <div className="glow-round"></div>
+      <div id="userReports" className="card relative">
+        <h1 className="small-text-grade">User Reports</h1>
+        <div id="userReportMap">
+          {Reports.reports.map((item, index) => (
+            <div className="flex singleReport" key={index}>
+              <h3>{index + 1}</h3>
+              <h3>{item.name}</h3>
+              <h3>{item.comment}</h3>
+              <button className="button" onClick={() => handleReplyClick(item)}>
+                Reply
+              </button>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+        {showReplyPopup && (
+          <div className="popup">
+            <div className="popup-content">
+              <span className="close" onClick={closePopup}>
+                &times;
+              </span>
+              {selectedReport && (
+                <div id="reply">
+                  <h2>Replying to: {selectedReport.name}</h2>
+                  <textarea
+                    rows="4"
+                    cols="50"
+                    placeholder="Type your reply here..."
+                  ></textarea>
+                  <div className="m-2">
+                    <button onClick={handelMessageSend} className="button">
+                      Send Reply
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="glow-round-right"></div>
+    </>
   );
 };
 

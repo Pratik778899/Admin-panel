@@ -1,6 +1,7 @@
 #todo-main {
     border-radius: 20px;
-    background: linear-gradient(144deg, #FFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+    background: linear-gradient(153deg, rgba(255, 255, 255, 0.00) -341.94%, #121d10 95.11%);
+    box-shadow: 0px 20px 100px -10px rgba(66, 91, 66, 0.1);
     backdrop-filter: blur(5px);
     padding: 20px;
     height: 300px;
@@ -9,8 +10,9 @@
 
 #popup {
     border-radius: 9.121px;
-    background: linear-gradient(113deg, #FFF -242.51%, #14101D 85.56%);
-    box-shadow: -0.243px -0.243px 0.365px 0px rgba(0, 0, 0, 0.36) inset;
+    border-radius: 20px;
+    background: linear-gradient(153deg, rgba(255, 255, 255, 0.00) -341.94%, #2b3c28 95.11%);
+    box-shadow: 0px 20px 100px -10px rgba(14, 208, 14, 0.1);
     backdrop-filter: blur(15.201066017150879px);
     padding: 20px;
     position: fixed;

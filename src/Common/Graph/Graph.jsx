@@ -52,7 +52,7 @@ const Graph = () => {
                   key={index}
                   style={{
                     height: `${(val / 40) * 100}px`,
-                    backgroundColor: index === 0 ? 'gray' : 'blue',
+                    backgroundColor: index === 0 ? 'gray' : 'green',
                     width: '30px',
                     margin: '0 2px',
                   }}

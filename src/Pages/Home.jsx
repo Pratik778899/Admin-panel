@@ -8,7 +8,8 @@ import Todo from "../Components/Todo/Todo";
 const Home = () => {
   return (
     <>
-      <div id="Home-main">
+    <div className="glow-round"></div>
+      <div id="Home-main" className="relative">
         <div id="card-container">
           <Card title={"Total User"} numbers={100000} />
           <Card
@@ -23,6 +24,7 @@ const Home = () => {
         </div>
         <Todo />
       </div>
+    <div className="glow-round-right"></div>
     </>
   );
 };
