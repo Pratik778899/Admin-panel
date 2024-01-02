@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./UserReports.css";
 import Reports from "./Reports.json";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UserReports = () => {
   const [showReplyPopup, setShowReplyPopup] = useState(false);
@@ -17,12 +19,13 @@ const UserReports = () => {
   };
 
   const handelMessageSend = () => {
-    alert("message send sucessfully");
+    toast.success("message send sucessfully");
     setShowReplyPopup(false);
   };
 
   return (
     <>
+    <ToastContainer />
       <div className="glow-round"></div>
       <div id="userReports" className="card relative">
         <h1 className="small-text-grade">User Reports</h1>

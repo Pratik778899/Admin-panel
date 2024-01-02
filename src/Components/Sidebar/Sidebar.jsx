@@ -46,8 +46,8 @@ const Sidebar = () => {
   return (
     <>
       {isLoggedIn && (
-        <div className="sidebar relative">
-          <div className="glow-round"></div>
+        <div className="sidebar ">
+          {/* <div className="glow-round"></div> */}
           <div id="slide-content" className="text">
             <div id="logo">
               <h1 className="text-grade">BKC</h1>
@@ -100,7 +100,7 @@ const Sidebar = () => {
             </ul>
           </div>
 
-          <div id="logout-main" className="text relative">
+          <div id="logout-main" className="text ">
             {isLoggedIn ? (
               <div id="logout" onClick={handelLogout}>
                 <i className="ri-logout-box-r-line"></i>
@@ -113,7 +113,7 @@ const Sidebar = () => {
               </div>
             )}
           </div>
-          <div className="glow-round-right "></div>
+          {/* <div className="glow-round-right "></div> */}
         </div>
       )}
     </>

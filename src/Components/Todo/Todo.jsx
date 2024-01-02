@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Todo.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Todo = () => {
   const [popUp, setpopUp] = useState(false);
@@ -29,11 +31,12 @@ const Todo = () => {
   };
 
   const handleRemoveTodo = indexToRemove => {
-    const updatedTasks = todoDatabase.filter((task, index) => index !== indexToRemove);
+    const updatedTasks = todoDatabase.filter(
+      (task, index) => index !== indexToRemove
+    );
     localStorage.setItem("TodoDatabase", JSON.stringify(updatedTasks));
     settasks(updatedTasks);
   };
-  
 
   const handleSave = () => {
     if (task.trim() !== "" && week.trim() !== "") {
@@ -46,12 +49,13 @@ const Todo = () => {
         JSON.stringify([...tasks, { week, task }])
       );
     } else {
-      alert("Enter The Task");
+      toast.error("Enter The Task");
     }
   };
 
   return (
     <>
+      <ToastContainer />
       {popUp && (
         <div id="popup">
           <h3 className="text-grade">Add New Task</h3>
